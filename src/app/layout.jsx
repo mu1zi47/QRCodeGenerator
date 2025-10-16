@@ -1,5 +1,6 @@
 import "./globals.css";
 import ParticlesBackground from "@/components/ParticlesBackground";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata = {
   title: "mu1zi47 QR code generator",
@@ -12,6 +13,7 @@ export default function RootLayout({ children }) {
       <body>
         <ParticlesBackground/>
         {children}
+        <SpeedInsights/>
       </body>
     </html>
   );
