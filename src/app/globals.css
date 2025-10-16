@@ -1,33 +1,39 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #0a1921;
+  --foreground: #fff;
 }
 
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  min-height: 100vh;
+}
+
+body ::selection,
+body ::-moz-selection {
+  background-color: rgba(45, 212, 191, 0.4);
+  color: rgb(94, 234, 212);
+}
+
+@font-face {
+  font-family: "Rothek";
+  src: url("/fonts/Rothek SemiBold.otf") format("opentype");
+  font-weight: 600;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: Rothek, sans-serif;
 }
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: Rothek, Helvetica, sans-serif;
+  z-index: 10;
 }
 
 a {
